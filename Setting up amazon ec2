@@ -1,0 +1,24 @@
+171 project assignment
+
+This server documentation is focused on the project James Thorpe is developing which is an online forum which he is developed for personal growth regarding the use and understanding of setting up a cloud-based Infrastructure as a Service (IaaS) device.
+
+
+Setting up Amazon EC2 connection
+
+This project utilises a ubuntu machine in amazon EC2
+-	To begin with you need to create an account through amazon webservices
+-	When logged in, go to the search bar in the top of the website and enter “EC2” and click the corresponding result.
+-	From there, press the launch instance button.
+-	Click the ubuntu option
+-	Create a keypair, call it a unique and memorable name and save it to a secure location on your computer or thumb drive.
+-	Leave all settings default except the network settings.
+-	Change the network settings to allow HTTP, HTTPS, and SSH.
+-	After which launch the EC2 instance.
+
+Entering the IaaS machine through terminal.
+
+-	Open the terminal and open the folder where your key is stored
+-	Enter the command 
+ssh -i “yourkeyname.pem” ubuntu@”yourpublicDNS”
+-	To find your public DNS, it can be accessed by selecting your project and looking at your details.
+-	Once entered, you have SSH access to the virtual infrastructure through the cloud connection.
