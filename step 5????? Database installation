@@ -1,0 +1,94 @@
+- Since the project we are creating uses a forum, we need to download a forum so people can create user profiles and interact on the site.
+
+- In this project, we download a opensouce database service called 
+
+MariaDB
+
+- MariaDB was created by the same developers as MySQL, and is designed to be a improvement, and a drop-in replacement for legacy MySQL systems.
+
+
+- Use the steps below to install and enable MariaDB
+
+
+Installing MariaDB
+
+Step 1.
+- install the mariadb package using the command below
+
+sudo apt install mariadb-server
+
+step 2.
+- Ensure that MariaDB is running on the system using the commands below.
+
+sudo systemctl start mariadb.service
+sudo systemctl enable mariadb.service
+
+
+Configuring MariaDB
+
+Step 1.
+- Run the included security script.
+
+sudo mysql_secure_installation
+
+- This command will ask the user multiple questions regarding their MariaDB database.
+
+Q1. Enter current password for root (enter for none): 
+A. press enter, do not set password for root user
+Q2. Switch to unix_socket authentication [Y/n]
+A. You already have your root account protected, so you can safely answer 'n'.
+Q3. Change the root password? [Y/n]
+A. You already have your root account protected, so you can safely answer 'n'.
+Q4. Remove anonymous users? [Y/n]
+A. Y
+Q5. Disallow root login remotely? [Y/n]
+A. Y
+Q6. Remove test database and access to it? [Y/n]
+A. Y
+Q7. Reload privilege tables now? [Y/n]
+A. Y
+
+
+Step 2. 
+- Testing to see if MariaDB is installed properly.
+- use the command below to find this information
+
+sudo systemctl status mariadb
+
+- The following will be displayed if marioadb is enabled and working properly
+
+● mariadb.service - MariaDB 10.11.13 database server
+     Loaded: loaded (/usr/lib/systemd/system/mariadb.service; enabled; preset: enabled)
+     Active: active (running) since Tue 2025-06-03 12:14:03 UTC; 11min ago
+       Docs: man:mariadbd(8)
+             https://mariadb.com/kb/en/library/systemd/
+   Main PID: 40649 (mariadbd)
+     Status: "Taking your SQL requests now..."
+      Tasks: 10 (limit: 7451)
+     Memory: 87.2M (peak: 90.1M)
+        CPU: 436ms
+     CGroup: /system.slice/mariadb.service
+             └─40649 /usr/sbin/mariadbd
+
+
+
+- If MaraiDB is not running, use the command sudo systemstart mariadb to start the database
+
+- If you want to obtain information regarding the version of MariaDB you are running use the command below
+
+sudo mysqladmin version
+
+- Information similar to below will be displayed.
+
+mysqladmin  Ver 10.0 Distrib 10.11.13-MariaDB, for debian-linux-gnu on x86_64
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Server version		10.11.13-MariaDB-0ubuntu0.24.04.1
+Protocol version	10
+Connection		Localhost via UNIX socket
+UNIX socket		/run/mysqld/mysqld.sock
+Uptime:			13 min 35 sec
+
+Threads: 1  Questions: 70  Slow queries: 0  Opens: 33  Open tables: 26  Queries per second avg: 0.085
+
+
