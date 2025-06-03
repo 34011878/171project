@@ -45,23 +45,18 @@ after this, do the command cd /var/www/
 rootuser:/var/www$ ls
 html  mediawiki-1.43.1
 
+step 4.
 
+- replace the html file with the mediawiki file, this will make the website display as mediawiki instead of the default apache2 html website.
 
-Step 4.
-to create the database and example user for MariaDB enter the following commands
+- to change these files do the following commands 
 
-CREATE DATABASE projectwiki;
-CREATE USER 'wikiuser'@'ubuntu' IDENTIFIED BY 'database_password';
-GRANT ALL PRIVILAGES ON projectwiki
+sudo mv html oldapachehtml
+sudo mv mediawiki-1.43.1 html
 
+- now when you open your website, the webpage will display the mediawiki homepage instead of the apache2.
 
-
-The html file is currently the file being displayed to the server, 
-12340u8123408u13420[u1324u0[93214u09312u09[312u09[130u4u0943209u3124
-
-4r812380u410ewijofqw;jwfe
-
-Install the database for your server
+step 5. 
 
 
 
