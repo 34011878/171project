@@ -1,0 +1,48 @@
+The website which should be displayed now to your url will display a message to finish the installation/setup of the website.
+
+Step 1.
+Click the complete the installation message
+
+Step 2.
+Select the default language for the website
+
+Step 3.
+Agree to copyright terms.
+This webpage will also check if you have downloaded, and setup everything properly until now.
+
+Step 4.
+Setup MariaDB database
+The following options will be displayed to you
+
+MariaDB/MySQL settings
+Q. Database host:
+A. localhost
+- Localhost is automatically declared, if the name localhost does not work use the local ip "127.0.0.1"
+
+Connect over SSL
+- this is a yes or no, if you select or do not select. i leave this unchecked as i am not connecting remotely, i am directly operating the local host
+
+Identify this wiki
+Q. Database name (no hyphens):
+A. my_wiki
+- The "Database name" field is asking for the name of the MaqiaDB database where the forum you created on MediaWiki will store all its pages, users, settings, etc.
+
+Q. Database table prefix (no hyphens):
+A. Leave this field blank, this is because we are only using one forum on the server so it makes it simpler.
+
+User account for installation
+Q. Database username:
+A. root
+- the database username is asking for the MariaDB user that the forum mediawiki will use connect to MariaDB, create tables, manage data.
+- Because of this leaving it as the root username is simple as we control it as the admin.
+
+Database password:
+A. leave this field blank
+- this is because, unless another user is logged into the EC2 instance, they cannot access this, you cannot access the database remotely.
+
+
+
+After i entered these into the answers, i had an issue with the hostname
+change mariadb thing so they create a user ;jnegro;iqgro;;qrg
+
+do this in morning
