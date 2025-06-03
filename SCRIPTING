@@ -1,0 +1,5 @@
+one-download installation
+
+sudo apt-get install apache2 mariadb-server php php-intl php-mbstring php-apcu php-curl php-mysql php-xml
+
+
