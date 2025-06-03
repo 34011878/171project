@@ -10,4 +10,11 @@ ssh -i “yourkeyname.pem” ubuntu@yourpublicDNS
 -	To find your public DNS, it can be accessed by selecting your amazon ec2 project and looking at your details.
 -	Once entered, you have SSH access to the virtual infrastructure through the cloud connection.
 
+- If you are having issues entering the ubuntu access terminal because of permission keys
+- execute the command
+
+chmod 400 keypairjames.pem
+
+- this will change the properties of the pem key to be more secure
+
 Next step is installing apache.
