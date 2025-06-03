@@ -1,1 +1,72 @@
+DOMAIN NAME SERVICE (DNS)
 
+INFORMATION BELOW, CAN SKIP IF ONLY WANT TO SETUP.
+
+
+The domain name services are used to make the websites url look more user-friendly.
+instead of a ip address, it can be a memorable name such as minecraft.com
+Obtain a domain name through a service provider e.g. noip.com, godaddy.com
+
+
+Once a DNS is created, we will link the ec2 amazon instance to the domain name you just created.
+After the domain name has been linked to ec2, you can make your website more secure by making traffic enter through.
+HTTPS instead of the default HTTP, HTTPS is on port 443 and HTTP is on port 80.
+
+Certbot is going to be used for this process. 
+Certbot allows the dns you will link to the public IP of your ecs allowing the website to recieve a certificate.
+certbot is a tool that will automatically sets up SSL/TLS certificates for your website using Let’s Encrypt.
+
+without certbot, the website will only recieve traffic through port 80 as HTTP, this traffic is not encrypted
+which means that traffic can be vulnerable to hackers as the site is not secure.
+
+With certbot, the website will recieve traffic through port 443 as HTTPS, this traffic is encrypted between the webbrowser
+and the server which it is hosted on, this website will now be displayed as secure with a padlock to confirm the certificate.
+
+
+
+SETUP STEPS
+
+After you have registered a domain name through your desired provider, you will need to link it to your EC2 connection through the following commands.
+these steps can be seen on the certbot.eff.org website, or by following as shown below.
+
+step 1. 
+- remove potential certbot instances on the server through the command
+
+sudo apt-get remove certbot
+
+step 2.
+- Install certbot on the server through the command 
+
+Sudo snap install --classic certbot
+
+step 3. 
+- the command below will ensure certbot is installed and can be ran.
+
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
+
+
+- Inside this step there is additional information needed to be entered during the executiion of certbot.
+- This includes
+- ensuring you have read and confirmed the terms of service.
+
+Y
+
+- Asking if you want to subscribe to their email list
+
+Y
+
+- Then you need to enter the domain name you would like to get the certificate on
+- In my instance, the domain name i entered is shown below
+
+34011878.hopto.org
+
+- After this you have successfully installed the HTTPS certificate for your domain name.
+
+Step4.
+- Test if the automatic certbot certificate renewal service works.
+
+sudo certbot renew --dry-run
+
+Step 5.
+- Confirm on your domain name that the certificate worked.
+- Look for the padlock, and check that the website loads using https:// instead of http://
