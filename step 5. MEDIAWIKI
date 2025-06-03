@@ -30,13 +30,25 @@ use ls -lo to check the file and see if you can execute it. qroigogijafgohiugrao
 check if above is valid
 
 step 3.
-Since we are using apache, and have already downloaded it onto our server, 
+Since we are using apache and have already downloaded apache2 onto the server, 
+we need to move the mediawiki file to where your apache html directory is.
+the html directorhy is by default in the location /var/www/
+you can access this area by doing cd /var/www/ but do not this yet
 
-you need to move the mediawiki file to where your apache html directory is. 
-documentroot directory is
+you need to move your mediawiki file into the /var/www/ directory. do this by using the command below
+
+sudo mv mediawiki-1.43.1 /var/www/
+
+after this, do the command cd /var/www/
+
+your directory should now look as shown below 
+
+rootuser:/var/www$ ls
+html  mediawiki-1.43.1
 
 
 
+Step 4.
 
 
 
