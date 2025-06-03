@@ -9,13 +9,21 @@ To install PHP follow the steps below
 Step 1. 
 The command below will install php
 
-sudo apt install php libapache2-mod-php php-mysql phpmyadmin -y
+sudo apt-get install  php libapache2-mod-php php-intl phpmyadmin php-mbstring php-apcu php-curl php-mysql php-xml 
 
-- This command download the php programming language
-- the libapache2-mod-php will allow the webserver to process php files, otherwise apache would try to download them instead
-- the php-mysql command is an extension of the php programming language which allows php code to access and interact with the database which will be installed next.
-- phpmyadmin is a service which allows the admin of the server will be able to access a control pannel.
+
+- php - This command download the php programming language
+- libapache2-mod-php will allow the webserver to process php files, otherwise apache would try to download them instead
+- php-mysql - is an extension of the php programming language which allows php code to access and interact with the database which will be installed next.
+- phpmyadmin - is a service which allows the admin of the server will be able to access a control pannel.
 - this control pannel will show all the users which have created an account on the website through MariaDB database.
+- php-intl - is an extension which helps the web server handle international languages, regions, and formats correctly e.g. the date
+- php-mbstring is a command which allows php to use multi-byte strings. this is used to prevent text corruption, help suppport international languages and more.
+- php-apcu is a performance based extension which makes php faster, this allows php to store data in ram so it can be reused quickly.
+- php-curl is a extension that allows php to send and recieve data over URLs
+- php-xml is an extenson that allows php to support XML documents, mediawiki relies on this file format.
+
+
 
 Step 2.
 Restart apache
@@ -23,3 +31,5 @@ Restart apache
 
 sudo systemctl restart apache2
 
+
+After you have completed these steps, the website should appear properly without any errors.
