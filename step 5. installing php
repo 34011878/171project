@@ -5,10 +5,19 @@ unlike another pgoramming language python, php has to be manually installed by t
 To install PHP follow the steps below
 
 Step 1. 
+The command below will install php
 
-sudo apt install php libapache2-mod-php 
+sudo apt install php libapache2-mod-php php-mysql phpmyadmin -y
 
+- This command download the php programming language
+- the libapache2-mod-php will allow the webserver to process php files, otherwise apache would try to download them instead
+- the php-mysql command is an extension of the php programming language which allows php code to access and interact with the database which will be installed next.
+- phpmyadmin is a service which allows the admin of the server will be able to access a control pannel.
+- this control pannel will show all the users which have created an account on the website through MariaDB database.
 
+Step 2.
+Restart apache
+- do this to ensure that apache2 is up to date with the new installation
 
-
+sudo systemctl restart apache2
 
