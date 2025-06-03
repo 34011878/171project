@@ -1,0 +1,44 @@
+MEDIAWIKI INSTALLATION
+
+mediawiki is a free 
+Because my project is going to be a forum, i have decided to use mediawiki as my platform to allow users to create their own posts and share information.
+mediawiki will allow me to collect and organise information, and make this public and available to people. 
+I am using mediawiki because it is powerful, multilingual, free and open, extensible, customisable, reliable, and free of charge.
+This is because it is a free software licensed under version 2 (or later version) of the GNU General Public License.
+
+Steps to install mediawiki on the server.
+Step 1.
+Enter the command below into the terminal
+
+wget https://releases.wikimedia.org/mediawiki/1.43/mediawiki-1.43.1.tar.gz
+
+Step 2.
+- Once the wikimedia file is downloaded, it will be stored as a .zip or a .zar.gz file format, this needs to be uncompressed to be used.
+- you can check your working directory to see if the file is there
+
+- use the command ls to check your working directory
+
+- to uncompress this file use the command 
+
+tar -szvf mediawiki-1.43.1.tar.gz
+
+- the version of the mediawiki file may change, as such check your working directory to find which file to open.
+
+by using ls you can check if the file has been decompressed.
+
+use ls -lo to check the file and see if you can execute it. qroigogijafgohiugraohiugerahuoaegwriohgaerwhoiu;aergohiu;eagwhriohiogewhoiegawh;oegawho;egahou;aegwhoaeghaewgoeaaeghoawegh
+check if above is valid
+
+step 3.
+Since we are using apache, and have already downloaded it onto our server, 
+
+you need to move the mediawiki file to where your apache html directory is. 
+documentroot directory is
+
+
+
+
+
+
+
+
