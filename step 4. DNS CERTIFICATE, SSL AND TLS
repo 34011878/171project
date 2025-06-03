@@ -26,7 +26,7 @@ and the server which it is hosted on, this website will now be displayed as secu
 
 SETUP STEPS
 
-After you have registered a domain name through your desired provider, you will need to link it to your EC2 connection through the following commands.
+Register a domain name through your desired provider, you will then need to link it to your EC2 connection through the commands below.
 these steps can be seen on the certbot.eff.org website, or by following as shown below.
 
 step 1. 
