@@ -1,0 +1,17 @@
+
+Installing Apache
+-	Apache is being installed to run as the webserver, apache will deliver the website to the user when they access.
+- Withoug apache there will not be anything returned to the user when they access the website.
+
+- use the steps below to install apache
+- execute the command
+
+Sudo apt update
+
+- sudo apt update is used as the currently installed apt repository may be out of date.
+
+- Next, to download apache2 to the ubuntu instance use the command
+
+Sudo apt install apache2 
+
+- After this, your webserver should be accessible by searching the public ip address of the amazon ec2
