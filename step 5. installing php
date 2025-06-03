@@ -1,0 +1,14 @@
+php is a programming language which is used as a server-side scripting language which is used mainly for building dynamic websites and web applications.
+php will allow the forum to create, display, and manage dynamic pages such as user posts, threads, user profiles, comments, etc.
+unlike another pgoramming language python, php has to be manually installed by the user.
+
+To install PHP follow the steps below
+
+Step 1. 
+
+sudo apt install php libapache2-mod-php 
+
+
+
+
+
