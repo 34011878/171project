@@ -56,6 +56,6 @@ sudo mv mediawiki-1.43.1 html
 
 - now when you open your website, the webpage will display the mediawiki homepage with an error instead of the apache2.
 
-- Refer to step 8 for installing php next.
+- Refer to step 7 for installing php next.
 
 
