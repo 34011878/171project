@@ -91,4 +91,24 @@ Uptime:			13 min 35 sec
 
 Threads: 1  Questions: 70  Slow queries: 0  Opens: 33  Open tables: 26  Queries per second avg: 0.085
 
+Step 3.
+Creating a account for MariaDB
+- this will as an admin account for MariaDB, this is needed to store information dynamically through the program.
+- this will be talked about later in step 8
+
+Enter the following commandline
+
+sudo mariadb
+
+then enter the text below
+
+CREATE DATABASE mywiki;
+CREATE USER 'wikiuser'@'localhost' IDENTIFIED BY 'securepassword';
+GRANT ALL PRIVILEGES ON mywiki.* TO 'wikiuser'@'localhost';
+FLUSH PRIVILEGES;
+EXIT;
+
+- The username and password is interchangable, this is just an example
+
+
 
