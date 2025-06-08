@@ -20,7 +20,7 @@ Step 2.
 
 - to uncompress this file use the command 
 
-tar -szvf mediawiki-1.43.1.tar.gz
+tar -xzvf mediawiki-1.43.1.tar.gz
 
 - the version of the mediawiki file may change, as such check your working directory to find which file to open.
 
