@@ -12,6 +12,7 @@ This webpage will also check if you have downloaded, and setup everything proper
 
 Step 4.
 Setup MariaDB database
+- this information relates to the user we created in step 5.
 The following options will be displayed to you
 
 MariaDB/MySQL settings
@@ -20,11 +21,12 @@ A. localhost
 - Localhost is automatically declared, if the name localhost does not work use the local ip "127.0.0.1"
 
 Connect over SSL
-- this is a yes or no, if you select or do not select. i leave this unchecked as i am not connecting remotely, i am directly operating the local host
+- this is a yes or no, if you select or do not select. 
+- i leave this unchecked as i am not connecting remotely, i am directly operating the local host
 
 Identify this wiki
 Q. Database name (no hyphens):
-A. my_wiki
+A. mywiki
 - The "Database name" field is asking for the name of the MaqiaDB database where the forum you created on MediaWiki will store all its pages, users, settings, etc.
 
 Q. Database table prefix (no hyphens):
@@ -32,17 +34,148 @@ A. Leave this field blank, this is because we are only using one forum on the se
 
 User account for installation
 Q. Database username:
-A. root
+A. wikiuser
 - the database username is asking for the MariaDB user that the forum mediawiki will use connect to MariaDB, create tables, manage data.
-- Because of this leaving it as the root username is simple as we control it as the admin.
+- Because of this we enter it as the information from step 5
 
 Database password:
-A. leave this field blank
-- this is because, unless another user is logged into the EC2 instance, they cannot access this, you cannot access the database remotely.
+A. securepassword
+- password created in step5
+
+
+Step 5.
+Database settings
+
+Database account for web access
+Q. Use the same account as for installation
+- Tick this box, as we have already created a database account
+
+Step 6.
+Name
+This section is asking for you to name your mediawiki website as well as create an admin account
+
+Q. Name of wiki
+A. Game Forum project
 
 
 
-After i entered these into the answers, i had an issue with the hostname
-change mariadb thing so they create a user ;jnegro;iqgro;;qrg
+Administrator account
+Q. your username
+A. Chose your own username e.g. Admin123
 
-do this in morning
+Q. Password creation
+A. keep it memorable and easy to remember
+e.g. projectpassword
+
+Q. Email
+A. enter to allow updates from the forum and so you can recieve password reset notifications
+
+Step 7.
+Website options
+
+1. Who can make changes to the website
+- select from the options
+open wiki
+account creation required
+authorised editors only
+private wiki
+- in my instance it is an open wiki so i selected that option.
+
+2. Copyright license
+
+There is the option for the following licenses in the footer of the website
+ 
+Creative Commons Attribution
+ 
+Creative Commons Attribution-ShareAlike
+ 
+Creative Commons Attribution-NonCommercial-ShareAlike
+ 
+Creative Commons Zero (Public Domain)
+ 
+GNU Free Documentation License 1.3 or later
+ 
+No license footer
+
+
+Because my forum is going to be based on videogames, there should be no profit based on it, as such the content is non-commercial and can be shared by anyone.
+- as such i chose the Creative Commons Attribution-NonCommercial-ShareAlike option.
+
+
+3. Email settings
+
+Email settings
+
+- Enable outbound email [ENABLED]
+
+Return email address:
+[ENABLED] - enter email as well
+
+
+Enable user-to-user email [ENABLED]
+
+Enable user talk page notification [ENABLED]
+
+Enable watchlist notification [DISABLED]
+
+Enable email authentication [ENABLED]
+
+4. SKINS
+- this will add to the look and feel of the website
+Because the project is aiming to be retro, i have selected monobook in this instance.
+
+5. EXTENSIONS
+- There are many options in this area so i will just mention if we enable or deny in this instance.
+- further research can be done be the user for their intended style and format.
+
+    Special Pages:
+CiteThisPage [ENABLED
+Echo [ENABLED]
+Interwiki [ENABLED]
+Linter [ENABLED]
+Nuke [ENABLED]
+ReplaceText [ENABLED]
+
+    Editors:
+CodeEditor [ENABLED]
+VisualEditor [ENABLED]
+WikiEditor [ENABLED]
+
+    Parser hooks:
+CategoryTree [ENABLED]
+Cite [ENABLED]
+ImageMap [ENABLED]
+InputBox [ENABLED]
+Math [DISABLED]
+ParserFunctions [ENABLED]
+Poem [DISABLED]
+Scribunto [ENABLED]
+SyntaxHighlight_GeSHi [ENABLED]
+TemplateData [ENABLED]
+
+    Media Handlers:
+PdfHandler [Enabled]
+
+    Spam Prevention:
+AbuseFilter [ENABLED]
+ConfirmEdit [ENABLED
+SpamBlacklist [ENABLED]
+TitleBlacklist [ENABLED]
+
+    API:
+PageImages [ENABLED]
+
+
+    Other:
+DiscussionTools [ENABLED]
+Gadgets [ENABLED]
+LoginNotify [ENABLED]
+MultimediaViewer [DISABLED
+OATHAuth [ENABLED]
+SecureLinkFixer [ENABLED]
+TextExtracts [ENABLED
+Thanks [ENABLED]
+
+
+
+
