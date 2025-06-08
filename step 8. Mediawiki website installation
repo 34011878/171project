@@ -215,6 +215,8 @@ scp -i ~/desktop/university/sem2/ict171/ass2/keypairjames.pem ~/desktop/universi
 Now the file should be uploaded and if you refresh the website it will work
 
 
+After this the website is free to edit and customise
+
 
 
 
