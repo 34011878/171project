@@ -176,6 +176,7 @@ SecureLinkFixer [ENABLED]
 TextExtracts [ENABLED
 Thanks [ENABLED]
 
-
-
+  Images and file uploads:
+Enable file uploads [ENABLED]
+Enable Instant Commons [ENABLED]
 
