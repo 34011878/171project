@@ -178,5 +178,44 @@ Thanks [ENABLED]
 
   Images and file uploads:
 Enable file uploads [ENABLED]
+- direcrt deleted images to a folder titled
+/images/deleted
 Enable Instant Commons [ENABLED]
+
+
+step 8.
+Install
+
+- Continue
+
+Database should be successfully enabled as of now
+
+step 9.
+As of now a localsettings.php file should be downloaded to your browser
+if not there is a download button displayed on the website.
+This configuration of settings is based off the steps we just went through and the enabled settings.
+
+I have downloaded and saved this file to the same folder where my pemkey is stored.
+
+This file will now need to be uploaded to the ec2 instance 
+to do this you will need to enter the following commands
+to find where index.php is stored. (where localsettings.php needs to be moved)
+sudo find /var/www/html -name index.php
+- my example outcome was as below
+  /var/www/html/mw-config/index.php
+  /var/www/html/index.php
+
+we need to upload the file to /var/www/html/
+
+scp -i ~/path/to/key.pem ~/path/to/localsettings.php ubuntu@ec2connection:/var/www/html/
+
+the example path i needed to follow is listed as below
+scp -i ~/desktop/university/sem2/ict171/ass2/keypairjames.pem ~/desktop/university/sem2/ict171/ass2/LocalSettings.php ubuntu@3.106.212.42:/var/www/html/
+
+Now the file should be uploaded and if you refresh the website it will work
+
+
+
+
+
 
