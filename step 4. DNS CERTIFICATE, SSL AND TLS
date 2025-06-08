@@ -56,6 +56,9 @@ step 4.
 sudo ln -s /snap/bin/certbot /usr/bin/certbot
 
 
+sudo certbot --apache
+
+
 - Inside this step there is additional information needed to be entered during the executiion of certbot.
 - This includes
 - ensuring you have read and confirmed the terms of service.
