@@ -84,3 +84,7 @@ sudo certbot renew --dry-run
 Step 6.
 - Confirm on your domain name that the certificate worked.
 - Look for the padlock, and check that the website loads using https:// instead of http://
+
+
+Reference:
+https://certbot.eff.org/instructions?ws=apache&os=snap
