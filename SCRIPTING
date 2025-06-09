@@ -1,5 +1,5 @@
-one-download installation
+one-download installation for apache, mariadb, php, phpmyadmin
 
-sudo apt-get install apache2 mariadb-server php php-intl php-mbstring php-apcu php-curl php-mysql php-xml
+sudo apt-get install apache2 mariadb-server php php-intl php-mbstring php-apcu php-curl php-mysql php-xml phpmyadmin 
 
 
